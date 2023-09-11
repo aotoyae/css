@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button_transform</title>
+    <style>
+      .buttonBody {
+        position: relative;
+      }
+      button {
+        border: none;
+        font-weight: bold;
+      }
+      .buttonRound {
+        width: 180px;
+        height: 180px;
+        font-size: 15px;
+        margin: 0 5px;
+        background-color: hotpink;
+        border-radius: 90px;
+      }
+      .buttonRoundShadow {
+        width: 190px;
+        height: 190px;
+        position: absolute;
+        top: 10px;
+        background-color: darkgray;
+        border-radius: 95px;
+        z-index: -1;
+      }
+      .buttonAngular {
+        background-color: #75fa60;
+        margin-left: 20px;
+        padding: 20px 40px;
+        font-size: 30px;
+        border-radius: 35px;
+        box-shadow: 0 13px darkgray;
+      }
+      button:hover {
+        color: #fff;
+      }
+      button:active {
+        transform: translateY(3px);
+      }
+      .buttonRound:hover {
+        background-color: #c72c6c;
+      }
+      .buttonRound:active ~ .buttonRoundShadow {
+        background-color: gray;
+      }
+      .buttonAngular:hover {
+        background-color: #2d9c33;
+      }
+      .buttonAngular:active {
+        box-shadow: 0 10px gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttonBody">
+      <button class="buttonRound">👉🏿 HEY, CLICK ME 👈🏿</button>
+      <div class="buttonRoundShadow"></div>
+      <button class="buttonAngular">👉🏿 NO! CLICK ME! 👈🏿</button>
+    </div>
+  </body>
+</html>
