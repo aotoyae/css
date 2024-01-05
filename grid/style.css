@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  border: 5px solid aquamarine;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lemonchiffon;
+  border: 5px solid pink;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  height: 500px;
+
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+
+  align-content: space-evenly;
+  justify-content: space-evenly;
+}
